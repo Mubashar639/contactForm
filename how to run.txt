@@ -1,0 +1,18 @@
+here we go
+How to run server
+1 first you need to open the terminal at og-form directory
+2 run npm run dev after the running of npm install
+3. I have set build of reactjs as static file  server app.js file
+4. that way it is serve from that
+5. I linser you server at 5000 port
+6. visit localhost:5000 and test it
+
+how to run client side ie reactjs
+
+1.first run npm install in client directory
+2.After run npm start in client directory
+3.Made any change if require by finding the component which you want yo change
+4.run "npm run build" for you serve rendering
+
+Issue: your database connection create issue
+it discounnect and shutdown the server Please make sure during testing you server is running correctly 

@@ -1,0 +1,156 @@
+.address-f {
+  width: 100%;
+  height: 87.5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.addressfrom {
+  width: 730px;
+  height: 700px;
+margin-top: 100px;
+  margin-bottom: 30px;
+  min-height: 200px;
+  padding-top: 30px;
+  background: rgb(250, 250, 250);
+  overflow: hidden;
+  position: relative;
+  top: 50px;
+  animation: mymove1 0.5s ease-in-out  reverse;
+}
+@keyframes mymove1 {
+  0% {
+    opacity: 0;
+    height: 400px;
+    top: 300px;
+  }
+  
+  100% {
+    opacity: 1;
+    top: 50px;
+    height: 700px;
+  }
+}
+.top-t {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.title-2address {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 10px;
+  color: rgb(30, 30, 30);
+  font-weight: 500;
+  font-family: "Libre Caslon Display", serif;
+}
+.subtitle-2address {
+  width: 70%;
+  text-align: center;
+  color: rgb(53, 52, 50);
+  font-family: "Avenir Next", Helvetica, Arial, sans-serif;
+  font-size: 1.0rem;
+  font-weight: 400;
+  line-height: 1.714rem;
+}
+
+.form-a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.input-container-a {
+  width: 92%;
+  height: 85px;
+}
+.form-label-a {
+  width: 70%;
+  font-family: "Avenir Next", Helvetica, Arial, sans-serif;
+  font-size: 0.815rem;
+  letter-spacing: 1.2px;
+  line-height: 1.42857rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: rgb(34, 34, 34);
+}
+.formItem {
+  position: relative;
+  top: -10px;
+}
+.inputStyle,
+.selectinlocation {
+  width: 100%;
+  border: 0px;
+  border-bottom: 0.5px solid rgb(160, 150, 150) !important;
+  height: 40px;
+  font-family: "Avenir Next", Helvetica, Arial, sans-serif;
+  color: rgb(0, 0, 0);
+  min-height: 2.858rem;
+  margin-bottom: 0px;
+  line-height: 24px;
+  text-overflow: ellipsis;
+  padding-left: 0px;
+  padding-right: 0px;
+  font-size: 1.043rem;
+  font-weight: 300 !important;
+  border-width: 0px;
+  border-style: initial;
+  border-color: initial;
+  border-image: initial;
+  background: rgb(250, 250, 250) !important;
+}
+.forPlace .ant-select-selection__rendered {
+  color: gray !important;
+}
+.selectinlocation {
+  position: relative;
+  top: -8px;
+}
+.inputStyle.ant-input:active {
+  border-color: 0.5px solid rgb(134, 128, 128) !important;
+  box-shadow: none;
+}
+.inputStyle:hover {
+  color: rgb(30, 30, 30);
+  border: 0px;
+  border-bottom: 0.5px solid rgb(167, 78, 78) !important;
+}
+
+.inputStyle:focus {
+  box-shadow: none !important;
+
+  border-bottom: 0.5px solid rgb(167, 78, 78) !important;
+}
+
+.ant-form-explain {
+  text-align: right;
+  font-weight: 500;
+  font-family: "Avenir Next", Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  line-height: 1.714rem;
+  color: rgb(141, 98, 98) !important;
+}
+.selectinlocation .ant-select-focused .ant-select-selection,
+.selectinlocation .ant-select-selection:focus,
+.selectinlocation .ant-select-selection:active,
+.selectinlocation .ant-select-open .ant-select-selection {
+  border: 0px;
+  box-shadow: #c5c3c3;
+  outline-width: 0;
+  border-bottom: 0.5px solid rgb(167, 78, 78) !important;
+}
+
+.selectinlocation .ant-select-selection {
+  border: 0px;
+  background: inherit;
+  font-size: inherit;
+  position: relative;
+  top: 14px;
+  border-bottom: 0.5px solid rgb(134, 128, 128) !important;
+}
+.ant-select-arrow {
+  color: black;
+}

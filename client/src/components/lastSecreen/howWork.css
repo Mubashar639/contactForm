@@ -1,0 +1,10 @@
+.how_work{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 87vh;
+}
+
+.detail-w{
+    margin-top: auto;
+}

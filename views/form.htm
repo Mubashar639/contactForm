@@ -1,0 +1,458 @@
+<html>
+	<head>
+		<title>Form</title>
+		
+		<link rel='stylesheet' href='css/style.css'></style>
+		<link rel='stylesheet' href='css/checkbox.css'></style>
+		<link rel='stylesheet' href='css/slider.css'></style>
+		<link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+		
+		<script src = "https://code.jquery.com/jquery-1.12.4.js"></script>
+		<script src = "js/main.js"></script>
+	</head>
+	<body>
+		<div id='topbar'>
+			<p class='tb-title'>Create Project <span style='float:right;font-family:"cambria", sans-serif'>Homepolish</span></p>
+			
+		</div>
+		<div id='bar'>
+			<div id='bar-thumb'></div>
+		</div>
+		<br><br>
+		<p class='title' style='color:white;font-size:32px'>Welcome to Homepolish, aol </p>
+		<p class='subtitle' style='color:white;width:40%; padding-left:30%'>Start by telling us about your project. The information you provide will help us tailor our service and professionals to our need</p>
+		<div id='form-container'>
+		<form id='form'>
+			<div class='form-sub-container' id='stage-11'>
+				<p class='title'>Successfully Submitted </p>
+				<br>
+				<p class='subtitle' style='max-width : 80%; margin-left : 10%;'>Your form is submitted successfully. We will contact you soon... Here will come any message that you want to show to your customers</p>
+				<br>
+			</div>	
+			<div class='form-sub-container' id='stage-10'>
+				<p class='title'>How we work: </p>
+				<br><br>
+				<p class='subtitle' style='max-width : 80%; margin-left : 10%;'>Once we review your project details, we will work to select the right designer for your needs. Depending on your project specifics and scope, we will recommend a flat fee or an hourly rate and a suggested number of hours.</p>
+				<br><br>
+				<div class='input-container'>
+					<button class='form-button dark' id='next-stage-10' style='width : 100%'>Finish & Request Service</button>
+				</div>
+			</div>
+				<div class='form-sub-container' id='stage-9'>
+				<p class='title'>I am estimating a total budget of: </p>
+				<p class='subtitle'>Provide us with your entire project.</p>
+				<div class='input-container'>
+					<p id='amount-view'>Adjust slider to view amount</p>
+					<input type='range' min=5 max=1000000  step = '5' class='slider' id='s9-estimated-amount' class='s9-estimated-amount'>
+				</div>
+				<div class='input-container'>
+					<input type='button' class='form-button' value='Back' id='back-stage-9'>
+					<input type='button' class='form-button dark' value='Next' id='next-stage-9'>
+				</div>
+			</div>
+				<div class='form-sub-container' id='stage-8'>
+				<p class='title'>Tell us more about your project:</p>
+				<p class='subtitle'>Select one or more services we can provide for your project</p>
+				<div class='input-container'>
+					<textarea class='form-textarea' id='s8-project-info' placeholder = "Write here"></textarea>
+				</div>
+				<div class='input-container'>
+					<input type='button' class='form-button' value='Back' id='back-stage-8'>
+					<input type='button' class='form-button dark' value='Next' id='next-stage-8'>
+				</div>
+			</div>
+			<div class='form-sub-container' id='stage-3'>
+				<p class='title'>I need:</p>
+				<p class='subtitle'>Select one or more services we can provide for your project</p>
+				<div class='input-container'>
+					<div class='mini-content-container' id='view-stage-4'>
+						<p class='mcc-title'>Interior Design <span class='right' id='interior-design-status'>+</span></p>
+						<p class='subtitle left-align'>
+							We'll select a designer who best complements you and your needs and be your advocate throughout the shopping process. Have a specific designer in mind. We'll do our best to match you with them.
+						</p>
+					</div>
+					<div class='mini-content-container right' id='view-stage-5'>
+						<p class='mcc-title'>Renovation <span class='right' id='renovation-status'>+</span></p>
+						<p class='subtitle left-align'>
+							We'll select a designer who best complements you and your needs and be your advocate throughout the shopping process. Have a specific designer in mind. We'll do our best to match you with them.
+						</p>
+					</div>
+					<div class='input-container'>
+						<input type='button' class='form-button' value='Back' id='back-stage-3'>
+						<input type='button' class='form-button dark' value='Next' id='next-stage-3'>
+					</div>
+				</div>
+			</div>
+			<div class='form-sub-container' id='stage-2'>
+				<p class='title'>My space is located at</p>
+				<p class='subtitle'>We'll use your address to select designers and renovation professionals for your project that are in your area.</p>
+				<br>
+				<div class='input-container'>
+					<p class='form-label'>Address</p>
+					<input class='form-input' type='text' id='s2-address'>
+					<p class='input-note'>This field is required</p>
+				</div>
+				<div class='input-container'>
+					<p class='form-label'>ZIP</p>
+					<input class='form-input' type='text' id='s2-zip'>
+					<p class='input-note'>This field is required</p>
+				</div>
+				<div class='input-container'>
+					<p class='form-label'>Phone Number</p>
+					<input class='form-input' type='text' id='s2-phone'>
+					<p class='input-note'>This field is required</p>
+				</div>
+				<div class='input-container'>
+					<p class='form-label'>The estimated total square footage of your space</p>
+					<select class='form-input mdb-select md-form mdb-select md-form' id='s2-area'>
+						<option></option>
+						<option>Below 500</option>
+						<option>500 - 1000</option>
+						<option>1000 - 1500</option>
+					</select>
+					<p class='input-note'>This field is optional</p>
+				</div>
+				<div class='input-container' >
+					<p class='form-label'>I heard about this through</p>
+					<select class='form-input mdb-select md-form mdb-select md-form' id='s2-news'>
+						<option></option>
+						<option>Goop</option>
+						<option>Newyork Times</option>
+						<option>A Friend</option>
+						<option>An Event</option>
+						<option>A Desginer</option>
+					</select>
+					<p class='input-note'>This field is optional</p>
+				</div>
+				<div class='input-container' style='margin-top : 50px;'>
+					<input type='button' class='form-button' value='Back' id='back-stage-2'>
+					<input type='button' class='form-button dark' value='Next' id='next-stage-2'>
+				</div>
+			</div>
+			<div class='form-sub-container' id='stage-1'>
+				<p class='title'>My space is a</p>
+				<br>
+				<div class='input-container'>
+					<input type='button' class='form-button selectable' value='Residence' id='space-type-0'>
+					<!--<input type='button' class='form-button selectable right' value='Commercial' id='space-type-1'>-->
+					<select class='form-button selectable right' style='text-align:center' id='space-type-1'>
+						<option value='1'>Commercial</option>
+						<option value='2'>Office</option>
+						<option value='3'>Retail</option>
+						<option value='4'>Restaurant or Hospitaility</option>
+					</select>
+				</div>
+			</div>
+			</form>
+		</div>
+		<div id='fixed-ele-container' style='display : none;'>
+			<div class='fixed-container' style='display : none;' id='stage-4' class='form-sub-container'>
+				<center>
+				<div class='fixed-sub-container'>
+					<div class='fsc-title'>
+						Interior Design
+					</div>
+					<div class='fsc-cancel'>
+						🗙
+					</div>
+					<br>
+					<div class='fsc-content'>
+						<div class='checkbox-container' style='margin-top : 50px;'>
+							<label class="container">Interior Finishes
+								<input type="checkbox" class='cb id-cb' id='s4-interior-finishes'>
+								<span class="checkmark"></span>
+							</label>
+						</div>
+						<div class='checkbox-container'>
+							<label class="container">Art Selection
+								<input type="checkbox" class='cb id-cb' id='s4-art-selection'>
+								<span class="checkmark"></span>
+							</label>
+						</div>
+						<div class='checkbox-container'>
+							<label class="container">Style Guidance
+								<input type="checkbox" class='cb id-cb' id='s4-style-guidance'>
+								<span class="checkmark"></span>
+							</label>
+						</div>
+						<div class='checkbox-container'>
+							<label class="container">Furniture Selection
+								<input type="checkbox" class='cb id-cb' id='s4-furniture-selection'>
+								<span class="checkmark"></span>
+							</label>
+						</div>
+						<p class='subtitle u pointer' id='id-do-nothing'>I dont plan on working with a designer for my project</p>
+						<div class='input-container'>
+							<input type='button' value='Done' class='form-button' id='next-stage-4'>
+						</div>
+					</div>
+				</div>
+				</center>
+			</div>
+			<div class='fixed-container form-sub-container' style='display : none;' id='stage-5'>
+				<center>
+				<div class='fixed-sub-container'>
+					<div class='fsc-title'>
+						Build and Renovation
+					</div>
+					<div class='fsc-cancel'>
+						🗙
+					</div>
+					<br>
+					<br>
+					<div class='fsc-content'>
+						<p class='subtitle'>Which degree of renovations are you planning</p>
+						<div class='item-container' id='s5-degree-0'>
+							LIGHT
+							<p class='small-msg'>(Painting walls & installing bookcases)</p>
+						</div>
+						<div class='item-container' id='s5-degree-1'>
+							Medium
+							<p class='small-msg'>(Small bathroom upgrades, kitchen cabinet refreshes, new flooring)</p>
+						</div>
+						<div class='item-container' id='s5-degree-2'>
+							Gut
+							<p class='small-msg'>(Knocking down walls, changing bathroom or kitchen layout)</p>
+						</div>
+						<div class='item-container' id='s5-degree-3'>
+							New Build
+							<p class='small-msg'>(Building from the ground up)</p>
+						</div>
+						<br>
+						<p class='subtitle pointer u' id='ren-do-nothing'>I dont plan to do any renovation work</p>
+					</div>
+				</center>
+				</div>
+			</div>
+			<div class='fixed-container form-sub-container' style='display : none;' id='stage-6'>
+				<center>
+				<div class='fixed-sub-container' id='stage-6-con' style='width : 50%'>
+					<div class='fsc-title'>
+						Build and Renovation
+					</div>
+					<div class='fsc-cancel'>
+						🗙
+					</div>
+					<br>
+					<br>
+					<div class='fsc-content'>
+						<p class='subtitle'>Would you like to be contacted to contractor</p>
+						<div class='input-container'>
+							<div class='checkbox-container' style='margin-top : 0px;'>
+								<label class="container">Yes
+									<input type="checkbox" class='cb' id='s6-want-connection'>
+									<span class="checkmark"></span>
+								</label>
+							</div>
+							<div class='checkbox-container' style='margin-top : 0px;'>
+								<label class="container">No
+									<input type="checkbox" class='cb' id='s6-want-connection-no'>
+									<span class="checkmark"></span>
+								</label>
+							</div>
+						</div>
+						<p class='subtitle'>Are you planning any structural changes</p>
+						<div class='input-container'>
+							<div class='checkbox-container' style='margin-top : 0px;'>
+								<label class="container">Yes
+									<input type="checkbox" class='cb' id='s6-structural-changes'>
+									<span class="checkmark"></span>
+								</label>
+							</div>
+							<div class='checkbox-container' style='margin-top : 0px;'>
+								<label class="container">No
+									<input type="checkbox" class='cb' id='s6-structural-changes-no'>
+									<span class="checkmark"></span>
+								</label>
+							</div>
+						</div>
+						<div id='already-contacted' style='display:none;'>
+							<p class='subtitle'>In case of structural changes, have you already contacted an architect</p>
+							<div class='input-container'>
+								<div class='checkbox-container' style='margin-top : 0px;'>
+									<label class="container">Yes
+										<input type="checkbox" class='cb' id='s6-contacted-before'>
+										<span class="checkmark"></span>
+									</label>
+								</div>
+								<div class='checkbox-container' style='margin-top : 0px;'>
+									<label class="container">No
+										<input type="checkbox" class='cb' id='s6-contacted-before-no'>
+										<span class="checkmark"></span>
+									</label>
+								</div>
+							</div>
+						</div>
+						<input type='button' value='Back' class='form-button' id='sub-stage-6-back'>
+						<input type='button' value='Next' class='form-button' id='sub-stage-6'>
+						<br><br>
+						<span></span>
+					</div>
+				</div>
+				</center>
+			</div>
+			<div class='fixed-container form-sub-container' style='display : none;' id='stage-7'>
+				<center>
+				<div class='fixed-sub-container'>
+					<div class='fsc-title'>
+						Build and Renovation
+					</div>
+					<div class='fsc-cancel'>
+						🗙
+					</div>
+					<br>
+					<br>
+					<div class='fsc-content'>
+						<p class='subtitle'>What spaces do you want to renovate?</p>
+						<div class='input-container half inline-block left' style='width:calc(100% - 150px)'>
+							<p class='form-label'>Enter Location</p>
+							<select class='form-input mdb-select md-form' readonly id='s7-entire-location' style='float : right;width:150px'>
+							<option></option>
+							<option>Below 500</option>
+							<option>500 - 1000</option>
+							<option>1000 - 1500</option>
+							<option>Above 1500</option>
+							</select>
+						</div>
+						<div class='input-container half inline-block left'>
+							<p class='form-label'> Living Rooms</p>
+							<input type='number' class='form-input' readonly id='s7-living-rooms'>
+							<div class='s7-input-value'>
+								<form>
+									<div class="value-button dec" id="decrease" value="Decrease Value">-</div>
+									<input type="number" id="number" value="0" />
+									<div class="value-button inc" id="increase" value="Increase Value">+</div>
+								</form>
+								<input type='button' value='Cancel' class='form-button half val-cancel'>
+								<input type='button' value='Done' class='form-button half right dark val-done'>
+							</div>
+						</div>
+						<div class='input-container half inline-block left'>
+							<p class='form-label'> Bed Rooms</p>
+							<input type='number' class='form-input' readonly id='s7-bed-rooms'>
+							<div class='s7-input-value'>
+								<form>
+									<div class="value-button dec" id="decrease" value="Decrease Value">-</div>
+									<input type="number" id="number" value="0" />
+									<div class="value-button inc" id="increase" value="Increase Value">+</div>
+								</form>
+								<input type='button' value='Cancel' class='form-button half val-cancel'>
+								<input type='button' value='Done' class='form-button half right dark val-done'>
+							</div>
+						</div>
+						<div class='input-container half inline-block left'>
+							<p class='form-label'> Dining Rooms</p>
+							<input type='number' class='form-input' readonly id='s7-dining-rooms'>
+							<div class='s7-input-value'>
+								<form>
+									<div class="value-button dec" id="decrease" value="Decrease Value">-</div>
+									<input type="number" id="number" value="0" />
+									<div class="value-button inc" id="increase" value="Increase Value">+</div>
+								</form>
+								<input type='button' value='Cancel' class='form-button half val-cancel'>
+								<input type='button' value='Done' class='form-button half right dark val-done'>
+							</div>
+						</div>
+						<div class='input-container half inline-block left'>
+							<p class='form-label'> Kitchens</p>
+							<input type='number' class='form-input' readonly id='s7-kitchens'>
+							<div class='s7-input-value'>
+								<form>
+									<div class="value-button dec" id="decrease" value="Decrease Value">-</div>
+									<input type="number" id="number" value="0" />
+									<div class="value-button inc" id="increase" value="Increase Value">+</div>
+								</form>
+								<input type='button' value='Cancel' class='form-button half val-cancel'>
+								<input type='button' value='Done' class='form-button half right dark val-done'>
+							</div>
+						</div>
+						<div class='input-container half inline-block left'>
+							<p class='form-label'> Bathrooms</p>
+							<input type='number' class='form-input' readonly id='s7-bathrooms'>
+							<div class='s7-input-value'>
+								<form>
+									<div class="value-button dec" id="decrease" value="Decrease Value">-</div>
+									<input type="number" id="number" value="0" />
+									<div class="value-button inc" id="increase" value="Increase Value">+</div>
+								</form>
+								<input type='button' value='Cancel' class='form-button half val-cancel'>
+								<input type='button' value='Done' class='form-button half right dark val-done'>
+							</div>
+						</div>
+						<div class='input-container half inline-block left'>
+							<p class='form-label'> Entryways</p>
+							<input type='number' class='form-input' readonly id='s7-entryways'>
+							<div class='s7-input-value'>
+								<form>
+									<div class="value-button dec" id="decrease" value="Decrease Value">-</div>
+									<input type="number" id="number" value="0" />
+									<div class="value-button inc" id="increase" value="Increase Value">+</div>
+								</form>
+								<input type='button' value='Cancel' class='form-button half val-cancel'>
+								<input type='button' value='Done' class='form-button half right dark val-done'>
+							</div>
+						</div>
+						<div class='input-container half inline-block left'>
+							<p class='form-label'> Home Offices</p>
+							<input type='number' class='form-input' readonly id='s7-offices'>
+							<div class='s7-input-value'>
+								<form>
+									<div class="value-button dec" id="decrease" value="Decrease Value">-</div>
+									<input type="number" id="number" value="0" />
+									<div class="value-button inc" id="increase" value="Increase Value">+</div>
+								</form>
+								<input type='button' value='Cancel' class='form-button half val-cancel'>
+								<input type='button' value='Done' class='form-button half right dark val-done'>
+							</div>
+						</div>
+						<div class='input-container half inline-block left'>
+							<p class='form-label'> Kids / Nurseries</p>
+							<input type='number' class='form-input' readonly id='s7-kids'>
+							<div class='s7-input-value'>
+								<form>
+									<div class="value-button dec" id="decrease" value="Decrease Value">-</div>
+									<input type="number" id="number" value="0" />
+									<div class="value-button inc" id="increase" value="Increase Value">+</div>
+								</form>
+								<input type='button' value='Cancel' class='form-button half val-cancel'>
+								<input type='button' value='Done' class='form-button half right dark val-done'>
+							</div>
+						</div>
+						<div class='input-container half inline-block left'>
+							<p class='form-label'> Outdoor</p>
+							<input type='number' class='form-input' readonly id='s7-outdoor'>
+							<div class='s7-input-value'>
+								<form>
+									<div class="value-button dec" id="decrease" value="Decrease Value">-</div>
+									<input type="number" id="number" value="0" />
+									<div class="value-button inc" id="increase" value="Increase Value">+</div>
+								</form>
+								<input type='button' value='Cancel' class='form-button half val-cancel'>
+								<input type='button' value='Done' class='form-button half right dark val-done'>
+							</div>
+						</div>
+						<br>
+						<input type='button' value='Next' class='form-button' id='sub-stage-7' style='margin-bottom : 10px;'>
+					</div>
+				</div>
+			</div>
+			<div class='fixed-container form-sub-container' id='stage-error'>
+				<center>
+				<div class='fixed-sub-container'>
+					<div class='fsc-title'>
+						Something Wrong
+					</div>
+					<div class='fsc-cancel'>
+						🗙
+					</div>
+					<br>
+					<br>
+					<div class='fsc-content'>
+						<p class='subtitle' id='error-msg'></p>
+					</div>
+				</div>
+				</center>
+			</div>
+		</div>
+	</body>
+</html>

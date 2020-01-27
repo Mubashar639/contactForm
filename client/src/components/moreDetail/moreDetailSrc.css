@@ -1,0 +1,93 @@
+.detail_f {
+    display: flex;
+    margin-bottom: 30px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .project_detail{
+      height: 400px;
+  }
+  .detail_c {
+    width: 730px;
+    padding-bottom: 30px !important;
+
+    margin: auto;
+    min-height: 200px;
+    margin-top: 53px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background: rgb(250, 250, 250);
+  }
+  .title-c {
+    text-align: center;
+    margin-top: 50px;
+    height: 2.1435rem;
+    line-height: 2.1435rem;
+    margin-bottom: 10px;
+    font-weight: 300;
+    font-size: 1.629rem;
+    color: rgb(34, 34, 34);
+    font-family: "Libre Caslon Display", serif;
+  }
+  .detail-p{
+    font-size: 32px;
+    line-height: 2.0435rem;
+    font-weight: 500;
+    font-size: .829rem;
+    color: rgb(34, 34, 34);
+    font-family: "Avenir Next", Helvetica, Arial, sans-serif;
+  }
+  .detail-pt{
+    font-size: 32px;
+    line-height: 1.4035rem;
+    font-weight: 500;
+    width: 70%;
+    margin-top: -10px;
+    color: rgb(105, 105, 105);
+    text-align: center;
+    font-size: .829rem;
+    margin-bottom: 50px;
+    font-family: "Avenir Next", Helvetica, Arial, sans-serif;
+  }
+  @media screen and (max-width: 800px) {
+    .detail_c {
+      width: 90%;
+    }
+    .title-c { 
+        font-weight: 300;
+        font-size: 1.229rem;
+      
+      }
+      .detail-p{
+        line-height: 1.5435rem;
+        width: 80%;
+        text-align: center;
+       
+      }
+      .detail-pt{
+        width: 80%;
+      }
+  
+    
+  }
+  .project_info{
+      width: 90%;
+  }
+  .project_detail:hover,
+  .project_detail:focus,
+  .project_detail:active{
+     border:0;
+     outline-width: 0;
+     border-color: white;
+     outline: 0;
+     -webkit-box-shadow: 0 0 0 2px white;
+     box-shadow: 0 0 0 2px white;
+     
+  }
+  .project_detail{
+      border: 0;
+  }

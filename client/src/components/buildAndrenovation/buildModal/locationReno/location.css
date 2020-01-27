@@ -1,0 +1,283 @@
+.locationHeader {
+  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.location {
+  width: 76%;
+  font-size: 0.9rem;
+  font-weight: 400;
+  line-height: 1.214rem;
+}
+.locationBody {
+  width: 94%;
+  height: 300px;
+  margin: 3%;
+
+  cursor: pointer;
+}
+.entirelocationdiv {
+  position: relative;
+  display: flex;
+  border: 1px solid  rgb(204, 204, 204);
+  flex-direction: column;
+}
+.smallboxesContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: start;
+  position: relative;
+}
+.paralocation {
+  display: flex;
+  height: 65px;
+  background-color: white;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  text-transform: uppercase;
+  margin: 0;
+  border-width: 0px;
+  border-style: solid;
+  border-image: initial;
+  font-family: "Avenir Next", Helvetica, Arial, sans-serif;
+  font-size: 0.715rem;
+  letter-spacing: 1.2px;
+  line-height: 1.42857rem;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.paralocation:hover,
+.boxesLocation:hover {
+  text-decoration: underline;
+}
+.entirelocationdiv .anticon-cross {
+  position: absolute;
+  top: 25px;
+  left: 20px;
+}
+
+.smallboxes {
+  width: 33.333333%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 65px;
+  border-width: 0.5px;
+  border-style: solid;
+
+  border-image: initial;
+  border-color: rgb(204, 204, 204);
+  background-color: white;
+  box-sizing: border-box;
+}
+.smallboxes .icondiv {
+  width: 15%;
+  text-align: center;
+  font-size: 11px;
+}
+.smallboxes .items {
+  width: 15%;
+  text-align: center;
+  font-weight: 600;
+  margin-top: 10px;
+}
+.smallboxes .boxesLocation {
+  width: 63%;
+  text-align: center;
+  margin-top: 10px;
+  font-size: 11px;
+  display: flex;
+  background-color: white;
+  align-items: center;
+  justify-content: center;
+  font-family: "Avenir Next", Helvetica, Arial, sans-serif;
+  font-size: 0.715rem;
+  letter-spacing: 1.2px;
+  line-height: 1.42857rem;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.ant-popover-inner {
+  width: 300.44px !important;
+  height: 135px;
+  position: relative;
+  top: -39px;
+  display: flex;
+  align-items: center;
+  border-radius: 0;
+}
+.ant-popover-inner > div {
+  width: 100%;
+  height: 135px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.ant-popover-title {
+  height: 50%;
+  width: 100%;
+  padding-left: 30px;
+  box-sizing: border-box;
+  font-family: "Avenir Next", Helvetica, Arial, sans-serif;
+  font-size: 0.715rem;
+  letter-spacing: 1.2px;
+  line-height: 1.42857rem;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.ant-popover-inner-content {
+  width: 100% !important;
+  box-sizing: border-box;
+}
+.btndivpop {
+  width: 100% !important;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 5px;
+}
+.btnpopover {
+  width: 47% !important;
+  text-transform: uppercase !important;
+  font-family: "Avenir Next", Helvetica, Arial, sans-serif;
+  font-size: 0.715rem;
+  letter-spacing: 1.2px;
+  line-height: 1.42857rem;
+  text-transform: uppercase !important;
+  font-weight: 500;
+  height: 35px;
+}
+.btnOkadd.btnpopover,
+.btnOkadd.btnpopover:focus {
+  background-color: rgb(34, 34, 34);
+  border: 1px solid rgb(34, 34, 34);
+  color: white;
+  outline: 0;
+  outline-width: 0;
+}
+
+.btncancleadd.btnpopover,
+.btncancleadd.btnpopover:focus {
+  background-color: white;
+  border: 1px solid rgb(34, 34, 34);
+  color: rgb(34, 34, 34);
+  outline: 0;
+  outline-width: 0;
+}
+.titleContent {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+}
+.plusMinuscon {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 50%;
+  justify-content: space-around;
+}
+.plusMinuscon .anticon {
+  font-size: 1.15rem;
+  letter-spacing: 1.2px;
+  line-height: 1.42857rem;
+  font-weight: bolder;
+}
+.numbertext {
+  font-size: 1.15rem;
+  letter-spacing: 1.2px;
+  line-height: 1.42857rem;
+  font-weight: 500;
+  padding-top: 17px;
+}
+
+.sqarefoot{
+  width: 68px;
+  height: 30px;
+  position: absolute;
+  left: 47%;
+  text-align: left;
+  top: 2px;
+  color: rgb(34, 34, 34);
+  z-index: 200000;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+@media screen and (max-width: 650px) {
+  .smallboxes .boxesLocation {
+    font-size: 0.515rem;
+    letter-spacing: 0px;
+    width: 60%;
+    margin-top: 11px;
+    flex-wrap: wrap;
+  }
+  .smallboxes .items {
+    font-size: 0.615rem;
+    letter-spacing: 0px;
+    width: 20%;
+    flex-wrap: wrap;
+  }
+}
+
+.entirelocationSelect {
+  width: 50%;
+  border: 0px;
+  height: 40px;
+  font-family: "Avenir Next", Helvetica, Arial, sans-serif;
+  color: rgb(0, 0, 0);
+  min-height: 2.858rem;
+  margin-bottom: 0px;
+  line-height: 24px;
+  text-overflow: ellipsis;
+  padding-left: 0px;
+  background-color: white;
+  padding-right: 0px;
+  font-size: 1.043rem;
+  font-weight: 300 !important;
+  border-width: 0px;
+  border-style: initial;
+  border-color: initial;
+  border-image: initial;
+
+}
+.selectCommerial .ant-select-selection-selected-value {
+    margin-right: 5px;
+    float: unset;
+    text-align: center;
+  }
+  
+
+.entirelocationSelect .ant-select-focused .ant-select-selection,
+.entirelocationSelect .ant-select-selection:focus,
+.entirelocationSelect .ant-select-selection:active,
+.entirelocationSelect .ant-select-open .ant-select-selection {
+  border: 0px;
+  box-shadow: #c5c3c3;
+  outline-width: 0;
+  border-bottom:0;
+}
+.entirelocationSelect .ant-select-selection {
+    border: 0px;
+    background: inherit;
+    font-size: inherit;
+    position: relative;
+    border-bottom: 0px solid rgb(134, 128, 128) !important;
+  }
+  .entirelocationSelect .ant-select-selection__placeholder{
+      color: rgb(126, 126, 126);
+  }
+
+  .slectionarea{
+      background-color: white !important;
+      position: relative;
+  }

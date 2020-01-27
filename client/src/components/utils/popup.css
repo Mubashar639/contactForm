@@ -1,0 +1,7 @@
+.errorBox .ant-modal-footer{
+  display: none;
+}
+
+.errorBox .ant-modal-body{
+    height: 100px !important;
+}

@@ -1,0 +1,35 @@
+.confirmModel_M .ant-modal-body {
+  background-color: rgb(30, 30, 30);
+}
+
+.notesDesignPhone {
+  color: white;
+  padding: 20px;
+  font-family: inherit;
+  text-align: justify;
+}
+
+.underlineBtn:hover {
+  text-decoration: underline;
+  color: white;
+
+}
+.underlineBtn{
+    color: white;
+    cursor: pointer;
+}
+.underline-Cbtn {
+  display: flex;
+  padding: 20px;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+}
+.confirmModel_M .ant-modal-header,.confirmModel_M .ant-modal-footer{
+    display: none;
+    height: 0px;
+}
+
+.confirmModel_M .ant-modal-close-x{
+    display: none
+}

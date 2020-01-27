@@ -1,0 +1,57 @@
+.btnRenoBuild {
+  width: 100%;
+  padding: 1%;
+  padding-top: 0;
+  height: 85px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.innerbtn-r {
+  width: 48%;
+  border-radius: 0px;
+  height: 65px;
+  background: white;
+  font-family: "Avenir Next", Helvetica, Arial, sans-serif;
+  font-size: 0.8572rem;
+  vertical-align: middle;
+  text-align: center;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  cursor: pointer;
+  line-height: 2em;
+  color: black;
+  border-width: 1px;
+  border-style: solid;
+  border-image: initial;
+  border-color: rgb(204, 204, 204);
+}
+.innerbtn-r:hover,
+.innerbtn-r:focus,
+.innerbtn-r:active,
+.innerbtn-r:focus:active {
+  border: 1.3px solid black !important;
+  color: #000 !important;
+  box-shadow: #c5c3c3 !important;
+  outline: 0 !important;
+  outline-width: 0;
+  outline-offset: 0 !important;
+  box-shadow: 0px;
+  background-image: none !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+.forp {
+  position: relative;
+  top: -20px;
+}
+.btntab {
+  padding: 12px;
+}
+
+.bdblack {
+  border: 1.3px solid black !important;
+}

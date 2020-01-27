@@ -1,0 +1,81 @@
+.topSection_h {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1%;
+  background: #ffff;
+  height: 70px;
+
+}
+.m_header{
+    position: fixed;
+    width: 100%;
+    z-index: 77;
+
+}
+.c_header{
+    width: 100%;
+    height: 70px;
+}
+.left_Headtop {
+  font-family: "Avenir Next", Helvetica, Arial, sans-serif;
+  color: rgb(88, 88, 88);
+  letter-spacing: 0.16em;
+
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+.right_Headtop {
+  letter-spacing: 0.16em;
+  font-size: 1.3rem;
+
+  text-transform: uppercase;
+  margin-right: 20px;
+  color: rgb(29, 28, 28);
+  font-family: "Libre Caslon Display", serif;
+}
+.address2titleas {
+    font-size: 24px;
+    margin: 0px;
+    font-family: "Roboto", sans-serif;
+    margin-top: 1px;
+    color: rgb(88, 88, 88);
+    letter-spacing: 3px;
+  }
+  .address2screensub {
+    font-size: 12px;
+    margin: 0px;
+    font-family: "Roboto", sans-serif;
+    margin-top: 2px;
+    color: rgb(88, 88, 88);
+    letter-spacing: 1px;
+  }
+@media screen and (max-width: 800px) {
+  .left_Headtop {
+    font-size: 0.9rem;
+    width: 45%;
+  }
+  .right_Headtop {
+    font-size: 0.8rem;
+  }
+  .address2titleas {
+    font-size: 14px;
+    letter-spacing: 2px;
+  }
+  .address2screensub {
+    font-size: 10px;
+
+  }
+}
+
+
+.bar {
+  width: 100%;
+  height: 3px;
+  background: #ffff;}
+.bar-thumb {
+  height: 3px;
+  background: rgb(23, 126, 121);
+}
+
+
