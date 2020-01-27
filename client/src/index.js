@@ -5,15 +5,15 @@ import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 import { Provider } from "react-redux";
 import { PersistGate } from "redux-persist/integration/react";
-import {store, persistor} from "./redux/store"
+import {store} from "./redux/store"
 
-
+// persistor
 
 ReactDOM.render(
   <Provider store={store}>
-    <PersistGate loading={null} persistor={persistor} >
+    {/* <PersistGate loading={null} persistor={persistor} > */}
       <App />
-    </PersistGate>
+    {/* </PersistGate> */}
   </Provider>,
   document.getElementById("root")
 );
