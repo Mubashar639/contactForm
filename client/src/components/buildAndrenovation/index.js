@@ -272,7 +272,8 @@ class BuildAndReno extends Component {
       nextProps.formData.renovationScreenOverAllValidate &&
       nextProps.formData.renovationScreenOverAllValidate !== "" &&
       prevState.renovationScreenOverAllValidate !==
-        nextProps.formData.renovationScreenOverAllValidate
+        nextProps.formData.renovationScreenOverAllValidate &&
+      prevState.space_type !== nextProps.formData.space_type
     ) {
       return {
         ...prevState,

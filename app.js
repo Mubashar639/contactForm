@@ -4,13 +4,17 @@ const mysql = require("mysql");
 var cors = require("cors");
 var morgan = require("morgan");
 
-let db_config = {
+const con = mysql.createConnection({
   host: "us-cdbr-iron-east-05.cleardb.net",
   user: "b8453fed27d2dd",
   password: "c9a6a5b6",
   database: "heroku_8922c0a50b494ee"
-}
-let con;
+});
+
+con.connect(function(err) {
+  if (err) throw err;
+  console.log("DataBase Connected!");
+});
 
 console.log("app started");
 
@@ -96,27 +100,3 @@ const port = process.env.PORT || 5000;
 app.listen(port, () => {
   console.log(`you server serve on ${port}`);
 });
-
-
-function handleDisconnect() {
-  con = mysql.createConnection(db_config); 
-                                                  
-
-  con.connect(function(err) {              
-    if(err) {                                    
-      console.log('error when connecting to db:', err);
-      setTimeout(handleDisconnect, 2000); 
-    }                                     
-  });                                     
-                                          
-  con.on('error', function(err) {
-    console.log('db error', err);
-    if(err.code === 'PROTOCOL_CONNECTION_LOST') { 
-      handleDisconnect();                         
-    } else {                                      
-      throw err;                                  
-    }
-  });
-}
-
-handleDisconnect();

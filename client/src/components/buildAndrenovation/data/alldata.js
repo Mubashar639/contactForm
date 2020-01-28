@@ -1,4 +1,5 @@
 export const alldata = {
+  space_type:"",
   Buildloading: false,
   Buildvisible: false,
   buidcheckedList: [],

@@ -7,11 +7,11 @@ import ErrorPopUp from "../utils/popup";
 import { connect } from "react-redux";
 import { setFormData } from "../../redux/actions/actionFiles/form_Action";
 
-
 var z1 = /^[+-]?(?=.)(?:\d+,)*\d*(?:\.\d+)?$/;
 const { Option } = Select;
 class Address extends Component {
   state = {
+    space_type: "",
     zip: "",
     zipIsValid: false,
     // zipHelp: "City Zip Code is required to create a project",
@@ -30,7 +30,7 @@ class Address extends Component {
     addressHelp: "",
 
     addressValidateStatus: "success",
-    heardOption: [
+    areaOption: [
       "Below 500",
       "500 - 1000",
       "1,000 - 1,500",
@@ -38,7 +38,13 @@ class Address extends Component {
       "2,000 - 2,500",
       "2,500 - 3,000"
     ],
-    areaOption: ["Goop", "Newyork Times", "A Friend", "An Event", "A Desginer"],
+    heardOption: [
+      "Goop",
+      "Newyork Times",
+      "A Friend",
+      "An Event",
+      "A Desginer"
+    ],
     area: "",
     news: "",
 
@@ -111,9 +117,21 @@ class Address extends Component {
     this.setState({ news });
   };
   static getDerivedStateFromProps(nextProps, prevState) {
-    if (nextProps.formData.address && nextProps.formData.address !== ""&&
-    prevState.address !== nextProps.formData.address) {
-      const { zip, phone, address, area, news } = nextProps.formData;
+    if (
+      nextProps.formData.address &&
+      nextProps.formData.address !== "" &&
+      prevState.address !== nextProps.formData.address &&
+      prevState.space_type !== nextProps.formData.space_type
+    ) {
+      const {
+        zip,
+        phone,
+        address,
+        area,
+        news,
+        space_type
+      } = nextProps.formData;
+
       return {
         ...prevState,
         zip,
@@ -121,6 +139,7 @@ class Address extends Component {
         address,
         area,
         news,
+        space_type,
         zipIsValid: true,
         phoneIsValid: true,
         addressIsValid: true
@@ -247,11 +266,11 @@ class Address extends Component {
               </p>
               <Select
                 placeholder="Optional"
-                className={!area? "selectinlocation forPlace": "selectinlocation "}
-
+                className={
+                  !area ? "selectinlocation forPlace" : "selectinlocation "
+                }
                 onChange={this.onChangeArea}
                 defaultValue={area === "" ? "Optional" : area}
-
                 name="area"
               >
                 {areaOption.map((item, index) => (
@@ -265,11 +284,12 @@ class Address extends Component {
               <p class="form-label-a">I heard about this through</p>
               <Select
                 showSearch
-                className={!news? "selectinlocation forPlace": "selectinlocation "}
+                className={
+                  !news ? "selectinlocation forPlace" : "selectinlocation "
+                }
                 placeholder="Optional"
                 onChange={this.onChangeNews}
                 defaultValue={news === "" ? "Optional" : news}
-
                 name="news"
               >
                 {heardOption.map((item, index) => (
