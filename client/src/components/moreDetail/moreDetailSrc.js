@@ -8,21 +8,27 @@ import { setFormData } from "../../redux/actions/actionFiles/form_Action";
 const { TextArea } = Input;
 class MoreDetials extends Component {
   state = {
-    project_info: ""
+    project_info: "",
+    space_type: ""
   };
   static getDerivedStateFromProps(nextProps, prevState) {
-    if (
-      nextProps.formData.project_info &&
-      nextProps.formData.project_info !== "" &&
-      prevState.project_info !== nextProps.formData.project_info
-    ) {
-      const { project_info } = nextProps.formData;
+    if (prevState.space_type !== nextProps.formData.space_type) {
+      const { project_info, space_type } = nextProps.formData;
       return {
         ...prevState,
-        project_info
+        project_info,
+        space_type
       };
     }
     return prevState;
+  }
+  componentDidMount() {
+    if (this.state.space_type !== this.props.formData.space_type) {
+      const { project_info } = this.props.formData;
+      this.setState({
+        project_info
+      });
+    }
   }
   onChange = ({ target: { value } }) => {
     this.setState({ project_info: value });
@@ -34,8 +40,15 @@ class MoreDetials extends Component {
     });
     this.props.changeScr("next");
   };
+  MianMainBack = () => {
+    const { project_info } = this.state;
+    this.props.sendFrom({
+      project_info
+    });
+    this.props.changeScr("pre");
+  };
   render() {
-    const {project_info} =this.state
+    const { project_info } = this.state;
     return (
       <div className="detail_f">
         <div className="detail_c">
@@ -60,7 +73,7 @@ class MoreDetials extends Component {
             />
           </div>
           <MyButton
-            handleBtnBack={() => this.props.changeScr("pre")}
+            handleBtnBack={() => this.MianMainBack()}
             handleNext={this.HandleMainOk}
             validateBlack={true}
           />

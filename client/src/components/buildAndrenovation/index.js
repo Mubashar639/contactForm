@@ -175,30 +175,50 @@ class BuildAndReno extends Component {
   };
   // " I dont plan to do any renovation work";
   onChangeSlectBuild = buidcheckedList => {
-    if (buidcheckedList.length > 0) {
+    const { buidcheckedListOption } = this.state;
+    const result = buidcheckedListOption.filter(value => value[3].value === 1);
+    if (result.length > 0) {
       this.setState({
-        buidcheckedList,
         buildSecValidate: true
       });
     } else {
       this.setState({
-        buidcheckedList: [],
         buildSecValidate: false
       });
     }
   };
+  onChangeBuitChecl = (e, index) => {
+    const { buidcheckedListOption } = this.state;
+    if (e.target.checked) {
+      buidcheckedListOption[index][3].value = 1;
+      this.setState(
+        {
+          buidcheckedListOption
+        },
+        () => this.onChangeSlectBuild()
+      );
+    } else {
+      buidcheckedListOption[index][3].value = 0;
 
+      this.setState(
+        {
+          buidcheckedListOption
+        },
+        () => this.onChangeSlectBuild()
+      );
+    }
+  };
   onChangeSlectReno = e => {
     this.setState({
-      renoCheckedList: e.target.value,
       BtnReno: true,
       showModalReno: false,
-      degree_renovation: e.target.value
+      degree_renovation: e
     });
   };
   showModalBuid = () => {
     this.setState({
-      Buildvisible: true
+      Buildvisible: true,
+      disablebuild: false
     });
   };
   showModalReno = () => {
@@ -213,26 +233,16 @@ class BuildAndReno extends Component {
     }, 3000);
   };
   handleOkBuild = () => {
-    if (this.state.buildSecValidate) {
-      const artselection = {
-        interior_finishes: 0,
-        art_selection: 0,
-        style_guidance: 0,
-        furniture_selection: 0
-      };
-      this.state.buidcheckedList.map(value => {
-        artselection[value] = 1;
-        this.setState(
-          {
-            ...artselection,
-            [value]: 1,
-            Buildvisible: false,
-            buildScreenOverAllValidate: true
-          },
-          () => console.log(this.state)
-        );
+    const { buidcheckedListOption } = this.state;
+    buidcheckedListOption.map(value => {
+      this.setState({
+        [value[2]]: value[3].value
       });
-    }
+    });
+    this.setState({
+      Buildvisible: false,
+      buildScreenOverAllValidate: true
+    });
   };
   handleOkBtn = () => {
     this.setState({ showModalReno: false });
@@ -269,15 +279,13 @@ class BuildAndReno extends Component {
   };
   static getDerivedStateFromProps(nextProps, prevState) {
     if (
-      nextProps.formData.renovationScreenOverAllValidate &&
-      nextProps.formData.renovationScreenOverAllValidate !== "" &&
-      prevState.renovationScreenOverAllValidate !==
-        nextProps.formData.renovationScreenOverAllValidate &&
       prevState.space_type !== nextProps.formData.space_type
     ) {
+      const { space_type } = nextProps.formData;
       return {
         ...prevState,
         ...nextProps.formData,
+        space_type,
         checkWarning: false
       };
     }
@@ -306,6 +314,7 @@ class BuildAndReno extends Component {
   SetIntialStateBuild = () => {
     this.setState({
       Buildvisible: false,
+      disablebuild: true,
       buidcheckedList: [],
       interior_finishes: 0,
       art_selection: 0,
@@ -315,11 +324,28 @@ class BuildAndReno extends Component {
         [
           "Interior Finishes",
           "(Sourcing material for a renovation)",
-          "interior_finishes"
+          "interior_finishes",
+          { value: 0 }
         ],
-        ["Art Selection", "(Finding the right pieces)", "art_selection"],
-        ["Style Guidance", "(Bring it all togather)", "style_guidance"],
-        ["Furniture Selection", "(Choosing new piesces)", "furniture_selection"]
+
+        [
+          "Art Selection",
+          "(Finding the right pieces)",
+          "art_selection",
+          { value: 0 }
+        ],
+        [
+          "Style Guidance",
+          "(Bring it all togather)",
+          "style_guidance",
+          { value: 0 }
+        ],
+        [
+          "Furniture Selection",
+          "(Choosing new piesces)",
+          "furniture_selection",
+          { value: 0 }
+        ]
       ],
       buildScreenOverAllValidate: false,
 
@@ -442,9 +468,9 @@ class BuildAndReno extends Component {
           visible: false
         },
         {
-          title: "kids",
+          title: "kids / nursery",
           value: 0,
-          attr: "kids  / nursery",
+          attr: "kids",
           set: 0,
           visible: false
         },
@@ -479,11 +505,19 @@ class BuildAndReno extends Component {
         checkWarning: true
       });
     } else {
+      const { space_type, ...other } = this.state;
       this.props.sendFrom({
-        ...this.state
+        ...other
       });
       this.props.changeScr("next");
     }
+  };
+  MainMainBackbtn = () => {
+    const { space_type, ...other } = this.state;
+    this.props.sendFrom({
+      ...other
+    });
+    this.props.changeScr("pre");
   };
   render() {
     const {
@@ -507,8 +541,14 @@ class BuildAndReno extends Component {
       entireLocationOption,
       renovationScreenOverAllValidate,
       handleOkBuild,
+      disablebuild,
       buildScreenOverAllValidate,
-      buildSecValidate
+      buildSecValidate,
+      interior_finishes,
+      art_selection,
+      style_guidance,
+      furniture_selection,
+      degree_renovation
     } = this.state;
     return (
       <div className="build-f">
@@ -532,7 +572,13 @@ class BuildAndReno extends Component {
                 onChangeSlectBuild={this.onChangeSlectBuild}
                 buildSecValidate={buildSecValidate}
                 title="interior design"
+                disablebuild={disablebuild}
                 showFbtn={true}
+                onChangeBuitChecl={this.onChangeBuitChecl}
+                interior_finishes={interior_finishes}
+                art_selection={art_selection}
+                style_guidance={style_guidance}
+                furniture_selection={furniture_selection}
                 SetIntialState={this.SetIntialStateBuild}
                 showpre={true}
                 innerTitle="What design support do you need?"
@@ -547,6 +593,7 @@ class BuildAndReno extends Component {
                 buidcheckedListOption={renoCheckedListOption}
                 buidcheckedList={renoCheckedList}
                 onChangeSlectBuild={this.onChangeSlectReno}
+                degree_renovation={degree_renovation}
                 title="BUILD AND RENOVATION"
                 showpre={true}
                 SetIntialState={this.SetIntialStateReno}
@@ -656,7 +703,7 @@ class BuildAndReno extends Component {
           </div>
           <div className="btncon">
             <MyButton
-              handleBtnBack={() => this.props.changeScr("pre")}
+              handleBtnBack={() => this.MainMainBackbtn()}
               handleNext={() => this.handleNextScreen()}
               disablelity={!renovationScreenOverAllValidate}
               validateBlack={renovationScreenOverAllValidate}

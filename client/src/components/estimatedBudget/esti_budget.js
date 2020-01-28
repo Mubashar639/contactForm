@@ -8,6 +8,7 @@ import { setFormData } from "../../redux/actions/actionFiles/form_Action";
 class EsimateBudget extends Component {
   state = {
     estimated_amount: 56000,
+    space_type: "",
     step: 10000,
     properformate: "",
     validateSec: false
@@ -49,25 +50,42 @@ class EsimateBudget extends Component {
     );
   };
   static getDerivedStateFromProps(nextProps, prevState) {
-    if (
-      nextProps.formData.estimated_amount &&
-      nextProps.formData.estimated_amount !== "" &&
-      prevState.estimated_amount !== nextProps.formData.estimated_amount
-    ) {
-      const { estimated_amount, properformate } = nextProps.formData;
-      return {
-        ...prevState,
+    if (prevState.space_type !== nextProps.formData.space_type) {
+      const {
         estimated_amount,
         properformate,
-        validateSec: true
-      };
+        space_type,
+        validateSec
+      } = nextProps.formData;
+      if (estimated_amount) {
+        return {
+          ...prevState,
+          estimated_amount,
+          properformate,
+          space_type,
+          validateSec
+        };
+      } else {
+        return {
+          ...prevState,
+          estimated_amount:56000,
+          properformate,
+          space_type,
+          validateSec
+        };
+      }
     }
     return prevState;
   }
   handleMainOk = () => {
-    const { estimated_amount, properformate } = this.state;
-    this.props.sendFrom({ estimated_amount, properformate });
+    const { estimated_amount, properformate, validateSec } = this.state;
+    this.props.sendFrom({ estimated_amount, properformate, validateSec });
     this.props.changeScr("next");
+  };
+  MianMainBack = () => {
+    const { estimated_amount, properformate, validateSec } = this.state;
+    this.props.sendFrom({ estimated_amount, properformate, validateSec });
+    this.props.changeScr("pre");
   };
   render() {
     const { estimated_amount, step, properformate, validateSec } = this.state;
@@ -115,7 +133,7 @@ class EsimateBudget extends Component {
             </div>
           </div>
           <MyButton
-            handleBtnBack={() => this.props.changeScr("pre")}
+            handleBtnBack={() => this.MianMainBack()}
             handleNext={() => this.handleMainOk()}
             disablelity={!validateSec}
             validateBlack={validateSec}

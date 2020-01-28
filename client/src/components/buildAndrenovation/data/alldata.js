@@ -1,5 +1,5 @@
 export const alldata = {
-  space_type:"",
+  space_type: "",
   Buildloading: false,
   Buildvisible: false,
   buidcheckedList: [],
@@ -11,11 +11,28 @@ export const alldata = {
     [
       "Interior Finishes",
       "(Sourcing material for a renovation)",
-      "interior_finishes"
+      "interior_finishes",
+      { value: 0 }
     ],
-    ["Art Selection", "(Finding the right pieces)", "art_selection"],
-    ["Style Guidance", "(Bring it all togather)", "style_guidance"],
-    ["Furniture Selection", "(Choosing new piesces)", "furniture_selection"]
+
+    [
+      "Art Selection",
+      "(Finding the right pieces)",
+      "art_selection",
+      { value: 0 }
+    ],
+    [
+      "Style Guidance",
+      "(Bring it all togather)",
+      "style_guidance",
+      { value: 0 }
+    ],
+    [
+      "Furniture Selection",
+      "(Choosing new piesces)",
+      "furniture_selection",
+      { value: 0 }
+    ]
   ],
   renoloading: false,
   showModalReno: false,
@@ -26,9 +43,10 @@ export const alldata = {
       "medium",
       "(Small bathroom upgrades, kitchen cabinet refreshes, new flooring)"
     ],
-    ["gut", "(Knocking down walls, changing bathroom or kitchen layout)"],
+    ["gut", "(Knocking down walls, changing bathroom  or kitchen layout)"],
     ["new build", "(Building from the ground up)"]
   ],
+  disablebuild: false,
   renoBtnloading: false,
   BtnReno: false,
 
@@ -121,9 +139,9 @@ export const alldata = {
       visible: false
     },
     {
-      title: "kids",
+      title: "kids / nursery",
       value: 0,
-      attr: "kids  / nursery",
+      attr: "kids",
       set: 0,
       visible: false
     },

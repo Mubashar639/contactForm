@@ -18,20 +18,23 @@ export default class BuildModal extends React.Component {
       buidcheckedListOption,
       buidcheckedList,
       onChangeSlectBuild,
+      onChangeBuitChecl,
       title,
       innerTitle,
       SetIntialState,
       downText,
+      degree_renovation,
       showpre,
+      disablebuild,
       showFbtn,
       btnvalidate,
       showFbtnTwo,
       handleBtnBack,
       locationScreen,
       handleNextbtnTolocation,
-      buildSecValidate
+      buildSecValidate,
+      
     } = this.props;
-
     return (
       <div>
         <Modal
@@ -79,23 +82,28 @@ export default class BuildModal extends React.Component {
                   <p className="headingbuild">{innerTitle}</p>
                   <p class="small-msg">{downText}</p>
                   {showFbtn && (
-                    <div>
-                      <Checkbox.Group
-                        defaultValue={buidcheckedList}
-                        onChange={onChangeSlectBuild}
-                      >
-                        {buidcheckedListOption.map((value, index) => {
-                          return (
-                            <Checkbox value={value[2]} key={index}>
-                              <p className="optionMain"> {value[0]} </p>
-                              <p className="optionNot"> {value[1]} </p>
-                            </Checkbox>
-                          );
-                        })}
-                      </Checkbox.Group>
+                    <div className="checkboxcon">
+                      {buidcheckedListOption.map((value, index) => {
+                        return (
+                          <Checkbox
+                            onChange={e => onChangeBuitChecl(e, index)}
+                            checked={
+                              buidcheckedListOption[index][3].value === 1
+                                ? true
+                                : false
+                            }
+                            name={value[2]}
+                            value={value[2]}
+                            key={index}
+                          >
+                            <p className="optionMain"> {value[0]} </p>
+                            <p className="optionNot"> {value[1]} </p>
+                          </Checkbox>
+                        );
+                      })}
                       <p
                         className="renoinfo small-msg"
-                        onClick={() => SetIntialState("asdfasd")}
+                        onClick={() => SetIntialState()}
                       >
                         {" "}
                         I dont plan to do any Interior design work{" "}
@@ -103,22 +111,26 @@ export default class BuildModal extends React.Component {
                     </div>
                   )}
                   {!showFbtn && (
-                    <Radio.Group
-                      defaultValue={buidcheckedList}
-                      onChange={onChangeSlectBuild}
-                      className="radioCont"
+                    <div
+                      defaultValue={
+                        buidcheckedList.length > 0 ? buidcheckedList : null
+                      }
+                     
+                      className="radioCont checkboxcon"
                     >
                       {buidcheckedListOption.map((value, index) => {
                         return (
-                          <Radio.Button value={value[0]} key={index}>
+                          <Button  className={index===degree_renovation?"simpleRadioBtn sleectecd" :"simpleRadioBtn"}  onClick={()=>onChangeSlectBuild(index)} value={value[0]} key={index}>
                             <div className="radiodev-as">
                               <p className="optionMain"> {value[0]} </p>
-                              <p className="optionNot"> {value[1]} </p>
+                              <p className="optionNot"> {value[1].slice(0,41)} </p>
+                              <p style={{marginTop:"-7px"}} className="optionNot"> {value[1].slice(41)} </p>
+
                             </div>
-                          </Radio.Button>
+                          </Button>
                         );
                       })}
-                    </Radio.Group>
+                    </div>
                   )}
                   {!showFbtn && (
                     <p className="renoinfo small-msg" onClick={SetIntialState}>

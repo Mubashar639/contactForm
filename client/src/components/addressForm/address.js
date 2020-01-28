@@ -129,7 +129,10 @@ class Address extends Component {
         address,
         area,
         news,
-        space_type
+        space_type,
+        zipIsValid,
+        phoneIsValid,
+        addressIsValid
       } = nextProps.formData;
 
       return {
@@ -140,9 +143,9 @@ class Address extends Component {
         area,
         news,
         space_type,
-        zipIsValid: true,
-        phoneIsValid: true,
-        addressIsValid: true
+        zipIsValid,
+        phoneIsValid,
+        addressIsValid
       };
     }
     return prevState;
@@ -164,12 +167,38 @@ class Address extends Component {
         phone,
         address,
         area,
-        news
+        news,
+        zipIsValid,
+        phoneIsValid,
+        addressIsValid
       });
       this.props.changeScr("mext");
     } else {
       this.setState({ errorModel: true });
     }
+  };
+  backbtn = () => {
+    const {
+      area,
+      news,
+      address,
+      zip,
+      phone,
+      zipIsValid,
+      phoneIsValid,
+      addressIsValid
+    } = this.state;
+    this.props.sendFrom({
+      zip,
+      phone,
+      address,
+      area,
+      news,
+      zipIsValid,
+      phoneIsValid,
+      addressIsValid
+    });
+    this.props.changeScr("pre");
   };
   render() {
     const {
@@ -303,7 +332,7 @@ class Address extends Component {
               validateBlack={zipIsValid && phoneIsValid && addressIsValid}
               // disablelity={!zipIsValid || !phoneIsValid || !addressIsValid}
               disablelity={false}
-              handleBtnBack={() => this.props.changeScr("pre")}
+              handleBtnBack={() => this.backbtn()}
               handleNext={this.handleMainOk}
             />
           </div>
