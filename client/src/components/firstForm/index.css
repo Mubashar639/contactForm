@@ -16,6 +16,9 @@
   font-weight: 500;
   font-family: "Libre Caslon Display", serif;
 }
+.asbtnblack{
+  border: 1.3px solid  rgb(30, 30, 30) !important;
+}
 .text_sub {
   width: 70%;
   text-align: center;

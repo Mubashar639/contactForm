@@ -7,11 +7,12 @@ import BuildAndReno from "./buildAndrenovation/index";
 import Moredatial from "./moreDetail/moreDetailSrc";
 import EstimateBudget from "./estimatedBudget/esti_budget";
 import HowWork from "./lastSecreen/howWork";
+import RegisterPage from "./registeration/register";
 
 export default class ComponentName extends Component {
   state = {
     currentScr: 1
-  };
+  }
   changeSrec = decision => {
     const { currentScr } = this.state;
     if (decision === "pre") {
@@ -21,12 +22,13 @@ export default class ComponentName extends Component {
 
   handleDom = () => {
     const { currentScr } = this.state;
-    if (currentScr === 1) return <Firstform changeScr={this.changeSrec} />;
-    if (currentScr === 2) return <AddressForm changeScr={this.changeSrec} />;
-    if (currentScr === 3) return <BuildAndReno changeScr={this.changeSrec} />;
-    if (currentScr === 4) return <Moredatial changeScr={this.changeSrec} />;
-    if (currentScr === 5) return <EstimateBudget changeScr={this.changeSrec} />;
-    if (currentScr === 6) return <HowWork changeScr={this.changeSrec} />;
+    if (currentScr === 1) return <RegisterPage changeScr={this.changeSrec} />;
+    if (currentScr === 2) return <Firstform changeScr={this.changeSrec} />;
+    if (currentScr === 3) return <AddressForm changeScr={this.changeSrec} />;
+    if (currentScr === 4) return <BuildAndReno changeScr={this.changeSrec} />;
+    if (currentScr === 5) return <Moredatial changeScr={this.changeSrec} />;
+    if (currentScr === 6) return <EstimateBudget changeScr={this.changeSrec} />;
+    if (currentScr === 7) return <HowWork changeScr={this.changeSrec} />;
   };
   render() {
     const {currentScr} = this.state

@@ -1,0 +1,85 @@
+.Signup {
+  letter-spacing: 3px;
+  height: 2.1435rem;
+  display: inline-block;
+  line-height: 2.1435rem;
+  font-size: 1.429rem;
+  text-transform: uppercase;
+  color: rgb(34, 34, 34);
+  text-align: center;
+}
+.SignupForm {
+  width: 100%;
+  height: 87.5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+}
+
+.Signup{
+    width: 100%;
+    height: 50px;
+    border-bottom: .5px solid rgb(219, 219, 219);
+}
+ .SignupForm_inner {
+  width: 730px;
+  /* margin-bottom: 30px; */
+  min-height: 200px;
+  padding-top: 30px;
+  background: rgb(250, 250, 250);
+  overflow: hidden;
+}
+
+.signguo.a2 {
+    white-space: nowrap;
+    font-family: "Avenir Next", Helvetica, Arial, sans-serif;
+    font-size: 0.8572rem;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    line-height: 2em;
+    text-transform: uppercase;
+    cursor: pointer;
+    background-color: rgb(204, 204, 204);
+    color: rgb(255, 255, 255);
+    border-width: 1px;
+    border-style: solid;
+    border-image: initial;
+    border-color: rgb(204, 204, 204);
+    width: 90%;
+    height: 51px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  
+
+@media screen and (max-width: 800px) {
+    .SignupForm_inner {
+      width: 90%;
+    }
+   
+    .title-2address {
+      font-size: 1.3rem;
+    }
+    .subtitle-2address {
+      width: 80%;
+      font-size: 0.9rem;
+      font-weight: 400;
+      line-height: 1.14rem;
+    }
+    .heardabout{
+      margin-top: 20px;
+    }
+    .form-label-a {
+      font-size: 0.75rem;
+      font-weight: 400;
+      width: 100%;
+      line-height: 1.14rem;
+    }
+  }
+  .slectionarea{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }

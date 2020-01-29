@@ -7,12 +7,12 @@ import axios from "axios";
 import ConfirmModel from "../utils/popup";
 import { clearData } from "../../redux/actions/actionFiles/form_Action";
 
-
-
 class HowWork extends Component {
   state = {
-    email:"test@test.com",
-    fullName:"test",
+    email: "",
+    firstName: "",
+    lastName: "",
+
     zip: "0",
     phone: "0",
     address: "0",
@@ -64,6 +64,7 @@ class HowWork extends Component {
       kitchens,
       bathrooms,
       entryways,
+      email,
       offices,
       kids,
       outdoor,
@@ -72,7 +73,9 @@ class HowWork extends Component {
       space_type,
       news,
       area,
-      degree_renovation
+      degree_renovation, 
+      firstName,
+      lastName,
     } = this.props.alldata.form;
 
     this.setState({
@@ -95,12 +98,15 @@ class HowWork extends Component {
       entryways,
       offices,
       kids,
+      email,
       outdoor,
       project_info,
       estimated_amount,
       space_type,
       news,
       area,
+      firstName,
+      lastName,
       degree_renovation
     });
   }
@@ -114,20 +120,25 @@ class HowWork extends Component {
     this.setState({
       btnloadin: true
     });
-    const { modelcontol, statement, btnloadin,title, ...otherProps } = this.state;
+    const {
+      modelcontol,
+      statement,
+      btnloadin,
+      title,
+      ...otherProps
+    } = this.state;
     const body = JSON.stringify({ ...otherProps });
     try {
       const res = await axios.post(baseUrl + "/form", body, config);
       console.log(res);
-      if(res.status ===200){
-        
+      if (res.status === 200) {
         this.setState({
           btnloadin: false,
           statement: res.data.statement,
           title: res.data.title,
           modelcontol: true
         });
-        this.props.clearData()
+        this.props.clearData();
       }
     } catch (err) {
       this.setState({
@@ -165,7 +176,7 @@ class HowWork extends Component {
           ></div>
           <div style={{ width: "90%" }}>
             <Button
-            loading={this.state.btnloadin}
+              loading={this.state.btnloadin}
               style={{ background: "rgb(30,30,30)" }}
               key="NEXT"
               type="primary"
@@ -186,7 +197,7 @@ const mapStateToProps = (state, ownProps) => ({
   alldata: state.form_data
 });
 
-export default connect(mapStateToProps,{clearData})(HowWork);
+export default connect(mapStateToProps, { clearData })(HowWork);
 // project_info: '',
 // estimated_amount: '500000',
 // space_type: '0',

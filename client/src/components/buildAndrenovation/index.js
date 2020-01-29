@@ -507,7 +507,8 @@ class BuildAndReno extends Component {
     } else {
       const { space_type, ...other } = this.state;
       this.props.sendFrom({
-        ...other
+        ...other,
+        
       });
       this.props.changeScr("next");
     }

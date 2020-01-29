@@ -5,25 +5,25 @@
   padding: 1%;
   background: #ffff;
   height: 70px;
-
 }
-.m_header{
-    position: fixed;
-    width: 100%;
-    z-index: 77;
-
+.m_header {
+  position: fixed;
+  width: 100%;
+  z-index: 77;
 }
-.c_header{
-    width: 100%;
-    height: 70px;
+.c_header {
+  width: 100%;
+  height: 70px;
 }
 .left_Headtop {
   font-family: "Avenir Next", Helvetica, Arial, sans-serif;
   color: rgb(88, 88, 88);
   letter-spacing: 0.16em;
-
+  padding-left: 10px;
   font-size: 1.3rem;
   font-weight: 500;
+  opacity: 1;
+  animation: flickerAnimation 1s linear;
 }
 .right_Headtop {
   letter-spacing: 0.16em;
@@ -33,23 +33,43 @@
   margin-right: 20px;
   color: rgb(29, 28, 28);
   font-family: "Libre Caslon Display", serif;
+  opacity: 1;
+  animation: flickerAnimation 1s linear;
 }
 .address2titleas {
-    font-size: 24px;
-    margin: 0px;
-    font-family: "Roboto", sans-serif;
-    margin-top: 1px;
-    color: rgb(88, 88, 88);
-    letter-spacing: 3px;
+  font-size: 24px;
+  margin: 0px;
+  font-family: "Roboto", sans-serif;
+  margin-top: 1px;
+  color: rgb(88, 88, 88);
+  letter-spacing: 3px;
+  opacity: 1;
+  padding-left: 10px;
+
+  animation: flickerAnimation 1s linear;
+}
+.address2screensub {
+  font-size: 14px;
+  margin: 0px;
+  padding-left: 10px;
+
+  font-family: "Roboto", sans-serif;
+  margin-top: 2px;
+  color: rgb(88, 88, 88);
+  letter-spacing: 1px;
+  opacity: 1;
+  animation: flickerAnimation 1s linear;
+}
+@keyframes flickerAnimation {
+  /* flame pulses */
+  0% {
+    opacity: 0;
   }
-  .address2screensub {
-    font-size: 12px;
-    margin: 0px;
-    font-family: "Roboto", sans-serif;
-    margin-top: 2px;
-    color: rgb(88, 88, 88);
-    letter-spacing: 1px;
+  
+  100% {
+    opacity: 1;
   }
+}
 @media screen and (max-width: 800px) {
   .left_Headtop {
     font-size: 0.9rem;
@@ -64,18 +84,34 @@
   }
   .address2screensub {
     font-size: 10px;
-
   }
 }
-
 
 .bar {
   width: 100%;
   height: 3px;
-  background: #ffff;}
+  background: #ffff;
+}
 .bar-thumb {
   height: 3px;
   background: rgb(23, 126, 121);
 }
-
-
+.c_header .ant-progress-text {
+  display: none;
+}
+.c_header .ant-progress-outer {
+  padding-right: 0;
+}
+.c_header .ant-progress {
+  position: relative;
+  top: -16px;
+}
+.c_header .ant-progress-inner {
+  border-radius: 0px;
+  background-color: white;
+  height: 6px;
+}
+.c_header .ant-progress-bg {
+  border-radius: 0px;
+  height: 6px;
+}
