@@ -16,7 +16,7 @@
   height: 70px;
 }
 .left_Headtop {
-  font-family: "Avenir Next", Helvetica, Arial, sans-serif;
+  font-family: "Libre Caslon Display", serif;
   color: rgb(88, 88, 88);
   letter-spacing: 0.16em;
   padding-left: 10px;
@@ -31,6 +31,8 @@
 
   text-transform: uppercase;
   margin-right: 20px;
+  margin-top: 0px;
+  margin-bottom: 0px;
   color: rgb(29, 28, 28);
   font-family: "Libre Caslon Display", serif;
   opacity: 1;
@@ -39,7 +41,7 @@
 .address2titleas {
   font-size: 24px;
   margin: 0px;
-  font-family: "Roboto", sans-serif;
+  font-family: "Libre Caslon Display", serif;
   margin-top: 1px;
   color: rgb(88, 88, 88);
   letter-spacing: 3px;
@@ -53,7 +55,7 @@
   margin: 0px;
   padding-left: 10px;
 
-  font-family: "Roboto", sans-serif;
+  font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
   margin-top: 2px;
   color: rgb(88, 88, 88);
   letter-spacing: 1px;

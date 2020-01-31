@@ -31,11 +31,11 @@ class EsimateBudget extends Component {
   onChange = value => {
     let step = 0;
     if (value > 100000) {
-      step = 50000;
-    } else if (value > 50000) {
-      step = 10000;
-    } else if (value > 25000) {
       step = 5000;
+    } else if (value > 50000) {
+      step = 5000;
+    } else if (value > 25000) {
+      step = 1000;
     } else step = 1000;
 
     this.setState(
@@ -118,7 +118,7 @@ class EsimateBudget extends Component {
             <div className="slider-con">
               <Slider
                 min={5000}
-                max={1005000}
+                max={1000000}
                 step={step}
                 onChange={this.onChange}
                 onAfterChange={this.onAfterChange}

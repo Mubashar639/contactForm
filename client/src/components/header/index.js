@@ -31,7 +31,12 @@ class Header extends Component {
                 </div>
               )}
             </div>
-            <span className="right_Headtop">Homepolish</span>
+            <div>
+                  <center>
+                    <p class="right_Headtop">  Metro Flooring</p>
+                    <p class="right_Headtop">& Interior Design</p>
+                  </center>
+            </div>
           </div>
           <Progress strokeColor="rgb(23, 126, 121)" percent={(currentScr / 7) * 100} status="active" />
           {/* <div className="bar">

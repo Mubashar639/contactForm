@@ -103,7 +103,7 @@ class Firstform extends Component {
     return (
       <div className="first_f">
         <div className="text-form">
-          <p className="text_title">Welcome to Homepolish, 
+          <p className="text_title">Welcome, 
           <span style={{textTransform:"capitalize"}}>{" "+firstName}</span></p>
           <p className="text_sub">
             Start by telling us about your project. The information you provide

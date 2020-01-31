@@ -223,8 +223,8 @@ class Address extends Component {
     return (
       <div className="address-f">
         <ErrorPopUp
-          title="Some thing is wrong"
-          text="Required fields is empty"
+          title="Something is wrong"
+          text="A Required fields is empty"
           ModalCacle={this.handleModel}
           Modalvisible={errorModel}
         />
