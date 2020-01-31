@@ -3,7 +3,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 1%;
-  background: #ffff;
+  background: #f1eded;
   height: 70px;
 }
 .m_header {
@@ -110,7 +110,7 @@
 }
 .c_header .ant-progress-inner {
   border-radius: 0px;
-  background-color: white;
+  background-color: #f1eded;
   height: 6px;
 }
 .c_header .ant-progress-bg {
