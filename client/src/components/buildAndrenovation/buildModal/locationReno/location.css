@@ -204,8 +204,8 @@
   width: 68px;
   height: 30px;
   position: absolute;
-  left: 47%;
-  text-align: left;
+  left: 55%;
+  text-align: inherit;
   top: 2px;
   color: rgb(34, 34, 34);
   z-index: 200000;
@@ -239,6 +239,7 @@
   margin-bottom: 0px;
   line-height: 24px;
   text-overflow: ellipsis;
+  margin-right: 76px;
   padding-left: 0px;
   background-color: white;
   padding-right: 0px;
@@ -270,7 +271,7 @@
     border: 0px;
     background: inherit;
     font-size: inherit;
-    position: relative;
+    position: center !important;
     border-bottom: 0px solid rgb(134, 128, 128) !important;
   }
   .entirelocationSelect .ant-select-selection__placeholder{

@@ -59,7 +59,7 @@ export default class LocationRenoModel extends Component {
               <div className="slectionarea">
                 {entire_location !== 0 && (
               <p className="sqarefoot" onClick={this.HandlerShow}>
-                sq. ft
+                sq. ft.
               </p>
             )}
                 <Select
