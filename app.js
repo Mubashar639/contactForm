@@ -29,7 +29,7 @@ app.post("/form", (req, res) => {
   console.log(data);
 
   con.query(
-    "insert into form( address, area, art_selection, bathrooms, contacted_before, dining_rooms, entire_location, entryways, estimated_amount, furniture_selection, interior_finishes, kids, kitchens, living_rooms, news, offices, outdoor, project_info, space_type, structural_change, style_guidance, want_connection, zip, degree_renovation, phone) VALUES ( '" +
+    "insert into form( address, area, art_selection, bathrooms, contacted_before, dining_rooms, entire_location, entryways, estimated_amount, furniture_selection, interior_finishes, kids, kitchens, living_rooms, news, offices, outdoor, project_info, space_type, structural_change, style_guidance, want_connection, zip, degree_renovation, email, firstname, lastname, phone) VALUES ( '" +
       data.address +
       "', '" +
       data.area +
@@ -77,6 +77,12 @@ app.post("/form", (req, res) => {
       data.zip +
       "', '" +
       data.degree_renovation +
+      "', '" +
+      data.email +
+      "', '" +
+      data.firstName +
+      "', '" +
+      data.lastName +
       "', '" +
       data.phone +
       "') ",
