@@ -8,15 +8,17 @@ import Moredatial from "./moreDetail/moreDetailSrc";
 import EstimateBudget from "./estimatedBudget/esti_budget";
 import HowWork from "./lastSecreen/howWork";
 import RegisterPage from "./registeration/register";
-
+import Thanku from "./thanku/thanuSec";
+import SimpleBar from "simplebar-react";
+import "simplebar/dist/simplebar.min.css";
 export default class ComponentName extends Component {
   state = {
     currentScr: 1
-  }
+  };
   changeSrec = decision => {
     const { currentScr } = this.state;
     if (decision === "pre") {
-       this.setState({ currentScr: currentScr - 1 });
+      this.setState({ currentScr: currentScr - 1 });
     } else this.setState({ currentScr: currentScr + 1 });
   };
 
@@ -29,13 +31,26 @@ export default class ComponentName extends Component {
     if (currentScr === 5) return <Moredatial changeScr={this.changeSrec} />;
     if (currentScr === 6) return <EstimateBudget changeScr={this.changeSrec} />;
     if (currentScr === 7) return <HowWork changeScr={this.changeSrec} />;
+    if (currentScr === 8) return <Thanku changeScr={this.changeSrec} />;
   };
   render() {
-    const {currentScr} = this.state
+    const { currentScr } = this.state;
     return (
-      <div className={currentScr ===1 ? "constainer_form": currentScr>=2 && currentScr<=5 ? "constainer_form2-5":"constainer_formL" }>
+      <div className="main">
         <Header currentScr={currentScr} />
-        {this.handleDom()}
+        <SimpleBar
+          className={
+            currentScr === 1
+              ? "constainer_form"
+              : currentScr >= 2 && currentScr <= 5
+              ? "constainer_form2-5"
+              : "constainer_formL"
+          }
+        >
+          <div className="innerScreeenItem">
+          {this.handleDom()}
+          </div>
+        </SimpleBar>
       </div>
     );
   }

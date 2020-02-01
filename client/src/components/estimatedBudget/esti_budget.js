@@ -91,7 +91,7 @@ class EsimateBudget extends Component {
     const { estimated_amount, step, properformate, validateSec } = this.state;
     return (
       <div className="detail_f">
-        <div className="detail_c">
+        <div className="detail_c" >
           <p className="title-c Slider-h">I am estimating a total budget of:</p>
 
           <p className="detail-pt Slider-p">

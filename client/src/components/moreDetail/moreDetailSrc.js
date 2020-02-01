@@ -50,7 +50,7 @@ class MoreDetials extends Component {
   render() {
     const { project_info } = this.state;
     return (
-      <div className="detail_f">
+      <div className="detail_f" style={{marginTop:"160px"}}>
         <div className="detail_c">
           <p className="title-c">Tell us more about your project</p>
           <p className="detail-p">

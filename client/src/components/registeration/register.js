@@ -152,7 +152,7 @@ class Address extends Component {
                 className="formItem"
               >
                 <Input
-                  type="email"
+                  type="text"
                   name="email"
                   onChange={this.handleChange}
                   value={email}

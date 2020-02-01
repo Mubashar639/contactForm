@@ -9,15 +9,16 @@ class Header extends Component {
         <div className="m_header">
           <div className="topSection_h">
             <div>
-            {currentScr === 1 && (
+              {currentScr === 1 && (
                 <span className="left_Headtop">WELCOME</span>
               )}
               {currentScr === 2 && (
                 <span className="left_Headtop">CREATE A PROJECT </span>
               )}
-              {currentScr === 7 && (
-                <span className="left_Headtop">THANK YOU </span>
-              )}
+              {currentScr === 7 ||
+                (currentScr === 8 && (
+                  <span className="left_Headtop">THANK YOU </span>
+                ))}
               {currentScr === 3 && (
                 <div>
                   <p class="address2screensub">CREATE A PROJECT </p>
@@ -32,19 +33,17 @@ class Header extends Component {
               )}
             </div>
             <div>
-                  <center>
-                    <p class="right_Headtop">  Metro Flooring</p>
-                    <p class="right_Headtop">& Interior Design</p>
-                  </center>
+              <center>
+                <p class="right_Headtop"> Metro Flooring </p>
+                <p class="right_Headtop">& Interior Design</p>
+              </center>
             </div>
           </div>
-          <Progress strokeColor="rgb(23, 126, 121)" percent={(currentScr / 7) * 100} status="active" />
-          {/* <div className="bar">
-            <div
-              style={{ width: `${(currentScr / 6) * 100}%` }}
-              className="bar-thumb"
-            ></div>
-          </div> */}
+          <Progress
+            strokeColor={currentScr < 8 ? "rgb(23, 126, 121)" : "green"}
+            percent={(currentScr / 8) * 100}
+            status="active"
+          />
         </div>
       </div>
     );

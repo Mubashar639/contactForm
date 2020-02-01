@@ -132,12 +132,7 @@ class HowWork extends Component {
       const res = await axios.post(baseUrl + "/form", body, config);
       console.log(res);
       if (res.status === 200) {
-        this.setState({
-          btnloadin: false,
-          statement: res.data.statement,
-          title: res.data.title,
-          modelcontol: true
-        });
+        this.props.changeScr("next")
         this.props.clearData();
       }
     } catch (err) {
