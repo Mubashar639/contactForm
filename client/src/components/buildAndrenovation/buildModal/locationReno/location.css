@@ -204,7 +204,7 @@
   width: 68px;
   height: 30px;
   position: absolute;
-  left: 55%;
+  left: 60%;
   text-align: inherit;
   top: 2px;
   color: rgb(34, 34, 34);
@@ -239,7 +239,7 @@
   margin-bottom: 0px;
   line-height: 24px;
   text-overflow: ellipsis;
-  margin-right: 76px;
+  margin-right: 0px;
   padding-left: 0px;
   background-color: white;
   padding-right: 0px;

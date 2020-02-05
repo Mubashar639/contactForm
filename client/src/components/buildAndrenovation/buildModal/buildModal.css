@@ -79,7 +79,7 @@
   color: rgb(134, 132, 126);
   font-family: inherit;
   line-height: 16px;
-  width: 90%;
+  /* width: 90%; */
   display: flex;
   text-overflow: ellipsis;
   flex-wrap: wrap;
