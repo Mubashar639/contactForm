@@ -51,7 +51,7 @@
 }
 .ant-checkbox-wrapper {
   width: 100%;
-  height: 75px;
+  height: 90px;
   background-color: white;
   margin-top: 20px;
   display: flex;
@@ -79,6 +79,7 @@
   color: rgb(134, 132, 126);
   font-family: inherit;
   line-height: 16px;
+  margin-top: 10px;
   /* width: 90%; */
   display: flex;
   text-overflow: ellipsis;
@@ -186,7 +187,7 @@
 
 .radioCont .simpleRadioBtn {
   width: 100%;
-  height: 80px;
+  height: 90px;
   display: flex;
   background-color: white;
   margin-top: 20px;

@@ -15,10 +15,9 @@ class Header extends Component {
               {currentScr === 2 && (
                 <span className="left_Headtop">CREATE A PROJECT </span>
               )}
-              {currentScr === 7 ||
-                (currentScr === 8 && (
-                  <span className="left_Headtop">THANK YOU </span>
-                ))}
+              {(currentScr === 7 || currentScr === 8) && (
+                <span className="left_Headtop">THANK YOU </span>
+              )}
               {currentScr === 3 && (
                 <div>
                   <p class="address2screensub">CREATE A PROJECT </p>

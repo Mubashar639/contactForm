@@ -239,8 +239,6 @@
   margin-bottom: 0px;
   line-height: 24px;
   text-overflow: ellipsis;
-  margin-right: 0px;
-  padding-left: 0px;
   background-color: white;
   padding-right: 0px;
   font-size: 1.043rem;
@@ -280,5 +278,7 @@
 
   .slectionarea{
       background-color: white !important;
-      position: relative;
+      position: relative; 
+      display: flex !important;
+      justify-content: center !important;
   }

@@ -133,7 +133,11 @@ class HowWork extends Component {
       console.log(res);
       if (res.status === 200) {
         this.props.changeScr("next")
+        // alert("submited")
         this.props.clearData();
+        this.setState({
+          btnloadin: false,
+        });
       }
     } catch (err) {
       this.setState({

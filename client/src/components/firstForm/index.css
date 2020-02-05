@@ -3,7 +3,8 @@
   height: 87%;
   width: 100%;
   align-items: center;
-
+  position: relative;
+  top: -70px;
   justify-content: center;
   flex-direction: column;
 }
