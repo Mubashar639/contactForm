@@ -36,16 +36,18 @@ export default class ComponentName extends Component {
   render() {
     const { currentScr } = this.state;
     return (
-      <div className="main">
+      <div 
+      style={{height:"100vh"}}
+      className={
+        currentScr === 1
+          ? "constainer_form "
+          : currentScr >= 2 && currentScr <= 5
+          ? "constainer_form2-5"
+          : "constainer_formL"
+      }>
         <Header currentScr={currentScr} />
         <SimpleBar
-          className={
-            currentScr === 1
-              ? "constainer_form"
-              : currentScr >= 2 && currentScr <= 5
-              ? "constainer_form2-5"
-              : "constainer_formL"
-          }
+        className="sameForHeight"
         >
           <div className="innerScreeenItem">
           {this.handleDom()}
