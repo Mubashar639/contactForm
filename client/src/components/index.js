@@ -13,7 +13,7 @@ import SimpleBar from "simplebar-react";
 import "simplebar/dist/simplebar.min.css";
 export default class ComponentName extends Component {
   state = {
-    currentScr: 4
+    currentScr: 1
   };
   changeSrec = decision => {
     const { currentScr } = this.state;
@@ -37,12 +37,17 @@ export default class ComponentName extends Component {
     const { currentScr } = this.state;
     return (
       <div style={{ height: "100%",
-      overflow: currentScr === 3 ? "auto" : "hidden"
+      overflow: currentScr === 3 ? "hidden" : "hidden"
     }}>
         <Header currentScr={currentScr} />
         <div
           style={{
-            height: "90%",
+            height: "100%",
+            marginTop:"-15px",
+            paddingBottom:"35px",
+            // paddingBottom: currentScr === 3 ? "0%": "2%",
+            // paddingTop: currentScr === 3 ? "0%": "2%"
+
           }}
           className={
             currentScr === 1
