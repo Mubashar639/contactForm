@@ -18,6 +18,10 @@
 
   cursor: pointer;
 }
+
+.entirelocationSelect.ant-select-open ~  .sqarefoot{
+  color:gray
+}
 .entirelocationdiv {
   position: relative;
   display: flex;
@@ -204,13 +208,14 @@
   width: 68px;
   height: 30px;
   position: absolute;
-  left: 60%;
+  left: 50%;
   text-align: inherit;
   top: 2px;
   color: rgb(34, 34, 34);
   z-index: 200000;
   font-size: 14px;
   font-weight: 500;
+  background:transparent
 }
 
 @media screen and (max-width: 650px) {

@@ -13,7 +13,7 @@ import SimpleBar from "simplebar-react";
 import "simplebar/dist/simplebar.min.css";
 export default class ComponentName extends Component {
   state = {
-    currentScr: 1
+    currentScr: 4
   };
   changeSrec = decision => {
     const { currentScr } = this.state;
@@ -36,23 +36,28 @@ export default class ComponentName extends Component {
   render() {
     const { currentScr } = this.state;
     return (
-      <div 
-      style={{height:"100vh"}}
-      className={
-        currentScr === 1
-          ? "constainer_form "
-          : currentScr >= 2 && currentScr <= 5
-          ? "constainer_form2-5"
-          : "constainer_formL"
-      }>
+      <div style={{ height: "100%",
+      overflow: currentScr === 3 ? "auto" : "hidden"
+    }}>
         <Header currentScr={currentScr} />
-        <SimpleBar
-        className="sameForHeight"
+        <div
+          style={{
+            height: "90%",
+          }}
+          className={
+            currentScr === 1
+              ? "constainer_form "
+              : currentScr >= 2 && currentScr <= 5
+              ? "constainer_form2-5"
+              : "constainer_formL"
+          }
         >
-          <div className="innerScreeenItem">
-          {this.handleDom()}
+          <div style={{ height: "100%" }}>
+            <SimpleBar className="sameForHeight">
+            <div className="innerScreeenItem">{this.handleDom()}</div>
+            </SimpleBar>
           </div>
-        </SimpleBar>
+        </div>
       </div>
     );
   }

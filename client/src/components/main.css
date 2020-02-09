@@ -12,16 +12,14 @@
   align-items: center;
 }
 .constainer_form {
-
   overflow-y: hidden;
   background: url(https://user-images.githubusercontent.com/53600331/72831972-e4640880-3c51-11ea-95c7-216e72cb563b.jpg)
     center fixed;
-    background-repeat: no-repeat;
-    background-size: cover;
-
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-.sameForHeight{
-  height: 88%;
+.sameForHeight {
+  height: 100%;
   overflow-x: hidden;
   display: flex;
   justify-content: center !important;
@@ -31,18 +29,15 @@
   overflow-y: scroll;
   background: url(https://raw.githubusercontent.com/rdarteda/FF/master/72831970-e4640880-3c51-11ea-998c-d5e656f54146.jpg)
     center fixed;
-    background-repeat: no-repeat;
-    background-size: cover;
-
-
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .constainer_formL {
   overflow-y: hidden;
   background: url(https://user-images.githubusercontent.com/53600331/72831971-e4640880-3c51-11ea-9150-4450f548af65.jpg)
     center fixed;
-    background-repeat: no-repeat;
-    background-size: cover;
-
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 ::-webkit-scrollbar {
@@ -68,12 +63,12 @@
   visibility: visible;
   display: flex !important;
   max-width: 100%;
-  max-height: 100% ;
+  max-height: 100%;
   align-items: center !important;
   justify-content: center !important;
 }
 
-.mycostom  .simplebar-content-wrapper {
+.mycostom .simplebar-content-wrapper {
   direction: inherit;
   box-sizing: border-box !important;
   position: relative;
@@ -82,5 +77,10 @@
   visibility: visible;
   display: block !important;
   max-width: 100%;
-  max-height: 100% ;
+  max-height: 100%;
+}
+
+#root {
+  height: 100vh;
+  width: 100vw;
 }
